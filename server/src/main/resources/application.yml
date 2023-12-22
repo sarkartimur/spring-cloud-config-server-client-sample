@@ -1,0 +1,9 @@
+server:
+  port: 8888
+spring.cloud.config.server.git:
+  uri: file:///${user.home}/Documents/config-repo
+  defaultLabel: master
+  clone-on-start: true
+reseller-time-zones:
+  mappings:
+    1: Europe/Moscow
