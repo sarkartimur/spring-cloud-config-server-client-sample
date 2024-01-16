@@ -6,15 +6,17 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 @SpringBootTest(classes = UserRegistrationUseCasePropertySource.class)
-@EnableConfigurationProperties()
+@EnableConfigurationProperties
 @ActiveProfiles("test")
-public class Tests {
+public class SpringBootTestTest {
     @Autowired
     UserRegistrationUseCasePropertySource source;
 
     @Test
     public void test () {
-        System.out.println();
+        assertEquals(2, source.getMappings().size());
     }
 }

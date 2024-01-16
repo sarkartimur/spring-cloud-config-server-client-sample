@@ -19,9 +19,7 @@ import org.springframework.validation.annotation.Validated;
 import java.util.Map;
 
 @Getter @Setter
-@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
-@RequiredArgsConstructor
-@Component
+@FieldDefaults(level = AccessLevel.PRIVATE)
 @ConfigurationProperties("reseller-time-zones")
 @Validated
 public class UserRegistrationUseCasePropertySource implements InitializingBean {
